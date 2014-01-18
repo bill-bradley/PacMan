@@ -18,7 +18,7 @@ std::vector<std::string> split(const std::string &s, char delim) {
 	return elems;
 }
 
-TileMap::TileMap()
+TileMap::TileMap(IO *pIO)
 {
 	cout << "Opening map file" << endl;
 	ifstream file("Resources/testalltiles.map");

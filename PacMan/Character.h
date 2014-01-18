@@ -18,9 +18,11 @@ public:
 	int GetWidth();
 	void MoveChar();
 	int mPosX, mPosY;
+	void DrawChar();
 
 private:
 	IO *mIO;
+	sf::Texture texture;
 	
 };
 

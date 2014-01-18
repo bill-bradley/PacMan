@@ -4,12 +4,17 @@
 Character::Character(IO *pIO)
 {
 	mIO = pIO;
+	InitChar();
 }
 
 void Character::InitChar()
 {
-	sf::Texture texture;
 	texture.loadFromFile("Resources/pacDan.png");
+	DrawChar();
+}
+
+void Character::DrawChar()
+{
 	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
 }
 

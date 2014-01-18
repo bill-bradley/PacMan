@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "Tiles.h"
+#include "IO.h"
 #include <sstream>
 #include <vector>
 
@@ -14,7 +15,7 @@ using namespace std;
 class TileMap
 {
 public:
-	TileMap();
+	TileMap(IO *pIO);
 	void drawMap();
 
 private:
