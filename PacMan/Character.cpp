@@ -34,5 +34,10 @@ void Character::MoveChar()
 	
 }
 
+int Character::GetPositionX()
+{
+	return mPosX;
+}
+
 
 

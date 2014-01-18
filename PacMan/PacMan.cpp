@@ -17,7 +17,8 @@ int main()
 	Pac mPac(&mIO);
 	Ghost mGhost(&mIO);
 	int xPos = mIO.GetScreenWidth();
-	
+	std::cout << xPos << std::endl;
+	int ghostPos;
 
 	while (true)
 	{
@@ -52,7 +53,14 @@ int main()
 		mPac.DrawPac();
 		//mChar.DrawChar();
 		mGhost.DrawGhost();
-		mGhost.mPosX++;
+		ghostPos = mGhost.GetPositionX();
+		if (xPos > ghostPos+32 ){
+			mGhost.mPosX+=10;
+		}
+		else {
+			mGhost.mPosX -= 10;
+		}
+		std::cout << mGhost.mPosX << std::endl;
 		mIO.UpdateScreen();
 	}
 
