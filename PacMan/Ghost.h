@@ -12,8 +12,6 @@ class Ghost : public Character
 public:
 
 	Ghost(IO *pIO);
-	
-
 	void InitChar();
 	void DrawGhost();
 	void MoveGhost();
