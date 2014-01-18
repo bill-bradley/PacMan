@@ -17,6 +17,8 @@ public:
 	void DrawRectangle(int sX, int sY, int pX, int pY, sf::Texture texture);
 	int PollKey();
 	int GetKey();
+	int GetScreenHeight();
+	int GetScreenWidth();
 
 };
 

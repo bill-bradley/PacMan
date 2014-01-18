@@ -19,6 +19,7 @@ public:
 	void MoveChar();
 	int mPosX, mPosY;
 	void DrawChar();
+	int GetPositionX();
 
 private:
 	IO *mIO;

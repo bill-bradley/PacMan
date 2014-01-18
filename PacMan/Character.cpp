@@ -4,9 +4,9 @@
 Character::Character(IO *pIO)
 {
 	mIO = pIO;
-	InitChar();
+	//InitChar();
 }
-
+/*
 void Character::InitChar()
 {
 	texture.loadFromFile("Resources/pacDan.png");
@@ -17,6 +17,7 @@ void Character::DrawChar()
 {
 	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
 }
+*/
 
 int Character::GetHeight()
 {
@@ -32,5 +33,6 @@ void Character::MoveChar()
 {
 	
 }
+
 
 

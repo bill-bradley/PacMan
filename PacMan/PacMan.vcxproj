@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Ghost.h" />
     <ClInclude Include="IO.h" />
     <ClInclude Include="TileMap.h" />
     <ClInclude Include="Pac.h" />
@@ -96,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="IO.cpp" />
     <ClCompile Include="TileMap.cpp" />
     <ClCompile Include="Pac.cpp" />

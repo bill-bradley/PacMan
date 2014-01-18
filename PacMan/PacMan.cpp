@@ -5,12 +5,19 @@
 #include "Character.h"
 #include "IO.h"
 #include "TileMap.h"
+#include "Pac.h"
+#include "Ghost.h"
+#include <iostream>
 
 int main()
 {
 	IO mIO;
 	Character mChar(&mIO);
 	TileMap pacmanMap = TileMap(&mIO);
+	Pac mPac(&mIO);
+	Ghost mGhost(&mIO);
+	int xPos = mIO.GetScreenWidth();
+	
 
 	while (true)
 	{
@@ -21,29 +28,31 @@ int main()
 		{
 			case (sf::Keyboard::Key::Right) :
 			{
-				mChar.mPosX+=10;
+				mPac.mPosX+=10;
 				break;
 			}
 			case (sf::Keyboard::Key::Left) :
 			{
-				mChar.mPosX -= 10;
+				mPac.mPosX -= 10;
 				break;
 			}
 			case (sf::Keyboard::Key::Up) :
 			{
-				mChar.mPosY -= 10;
+				mPac.mPosY -= 10;
 				break;
 			}
 			case (sf::Keyboard::Key::Down) :
 			{
-				mChar.mPosY += 10;
+				mPac.mPosY += 10;
 				break;
 			}
 		}
 
 		pacmanMap.drawMap();
-		mChar.DrawChar();
-
+		mPac.DrawPac();
+		//mChar.DrawChar();
+		mGhost.DrawGhost();
+		mGhost.mPosX++;
 		mIO.UpdateScreen();
 	}
 

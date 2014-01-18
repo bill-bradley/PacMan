@@ -2,24 +2,25 @@
 #include "Character.h"
 #include "IO.h"
 #include <iostream>
-#ifndef _PAC_
-#define _PAC_
+#ifndef _GHOST_
+#define _GHOST_
 
 #include <SFML\Graphics.hpp>
 
-class Pac : public Character
+class Ghost : public Character
 {
 public:
 
-	Pac(IO *pIO)
-	: Character(pIO)
+	Ghost(IO *pIO)
+		: Character(pIO)
 	{
-		texture.loadFromFile("Resources/pacDan.png");
-		DrawPac();
+		texture.loadFromFile("Resources/ghost.png");
+		DrawGhost();
 	}
-	
+
 	void InitChar();
-	void DrawPac();
+	void DrawGhost();
+	void MoveGhost();
 private:
 	IO *mIO;
 	sf::Texture texture;

@@ -21,7 +21,7 @@ void IO::UpdateScreen()
 
 void IO::ClearScreen()
 {
-	mScreen->clear();
+	mScreen->clear(sf::Color::White);
 }
 
 
@@ -69,4 +69,14 @@ int IO::GetKey()
 			mScreen->close();
 	};
 	return event.KeyPressed;
+}
+
+int IO::GetScreenHeight()
+{
+	return mScreen->getSize().y;
+}
+
+int IO::GetScreenWidth()
+{
+	return mScreen->getSize().x;
 }

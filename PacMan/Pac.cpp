@@ -5,5 +5,6 @@
 
 void Pac::DrawPac()
 {
-	std::cout << "test" << std::endl;
+	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
 }
+
