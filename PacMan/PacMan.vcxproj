@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="direction.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="IO.h" />
     <ClInclude Include="TileMap.h" />

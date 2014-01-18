@@ -16,7 +16,6 @@ public:
 	void DrawGhost();
 	void MoveGhost();
 
-	int xDirection;
 private:
 	IO *mIO;
 	sf::Texture texture;

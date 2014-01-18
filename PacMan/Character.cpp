@@ -4,6 +4,7 @@
 Character::Character(IO *pIO)
 {
 	mIO = pIO;
+	currentDirection = EAST;
 	//InitChar();
 }
 /*
@@ -18,6 +19,14 @@ void Character::DrawChar()
 	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
 }
 */
+
+direction Character::getDirection() {
+	return currentDirection;
+}
+
+void Character::setDirection(direction dir) {
+	currentDirection = dir;
+}
 
 int Character::GetHeight()
 {
