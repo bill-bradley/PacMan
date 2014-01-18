@@ -11,13 +11,7 @@ class Pac : public Character
 {
 public:
 
-	Pac(IO *pIO)
-	: Character(pIO)
-	{
-		texture.loadFromFile("Resources/pacDan.png");
-		DrawPac();
-	}
-	
+	Pac(IO *pIO);
 	void InitChar();
 	void DrawPac();
 private:

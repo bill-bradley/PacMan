@@ -1,7 +1,11 @@
 #include "stdafx.h"
 #include "Pac.h"
 
-
+Pac::Pac(IO *mIO) : Character(mIO)
+{
+	texture.loadFromFile("Resources/pacDan.png");
+	DrawPac();
+}
 
 void Pac::DrawPac()
 {

@@ -3,9 +3,9 @@
 
 Tiles::Tiles()
 {
-	std::cout << "Loading " << std::endl;
+	//std::cout << "Loading " << std::endl;
 	if (!textureTile.loadFromFile("Resources/pink_tile_set/spritesheet.png")) {
-		std::cout << "Error loading tile" << std::endl;
+		//std::cout << "Error loading tile" << std::endl;
 	}
 
 	spriteTile = sf::Sprite(textureTile);

@@ -17,7 +17,7 @@ int main()
 	Pac mPac(&mIO);
 	Ghost mGhost(&mIO);
 	int xPos = mIO.GetScreenWidth();
-	std::cout << xPos << std::endl;
+	//std::cout << xPos << std::endl;
 	int ghostPos;
 
 	while (true)
@@ -60,7 +60,7 @@ int main()
 		else {
 			mGhost.mPosX -= 10;
 		}
-		std::cout << mGhost.mPosX << std::endl;
+		//std::cout << mGhost.mPosX << std::endl;
 		mIO.UpdateScreen();
 	}
 

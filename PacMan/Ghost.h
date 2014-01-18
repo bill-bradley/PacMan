@@ -11,16 +11,14 @@ class Ghost : public Character
 {
 public:
 
-	Ghost(IO *pIO)
-		: Character(pIO)
-	{
-		texture.loadFromFile("Resources/ghost.png");
-		DrawGhost();
-	}
+	Ghost(IO *pIO);
+	
 
 	void InitChar();
 	void DrawGhost();
 	void MoveGhost();
+
+	int xDirection;
 private:
 	IO *mIO;
 	sf::Texture texture;

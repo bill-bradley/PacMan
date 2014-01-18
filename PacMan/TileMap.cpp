@@ -21,7 +21,7 @@ std::vector<std::string> split(const std::string &s, char delim) {
 TileMap::TileMap(IO *pIO)
 {
 	mIO = pIO;
-	cout << "Opening map file" << endl;
+	//cout << "Opening map file" << endl;
 	ifstream file("Resources/square.map");
 //	tiles = Tiles();
 
