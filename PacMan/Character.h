@@ -11,12 +11,17 @@
 class Character
 {
 public:
-	Character();
+	Character(IO *pIO);
 
-	int InitChar();
+	void InitChar();
 	int GetHeight();
 	int GetWidth();
 	void MoveChar();
+	int mPosX, mPosY;
+
+private:
+	IO *mIO;
+	
 };
 
 #endif // _CHARACTER_

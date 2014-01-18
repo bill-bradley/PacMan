@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <string>
 #ifndef _IO_
 #define _IO_
 
@@ -13,6 +14,9 @@ public:
 	int InitGraph();
 	void UpdateScreen();
 	void ClearScreen();
+	void DrawRectangle(int sX, int sY, int pX, int pY, sf::Texture texture);
+	int PollKey();
+	int GetKey();
 
 };
 

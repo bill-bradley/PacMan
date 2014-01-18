@@ -1,9 +1,16 @@
 #include "stdafx.h"
 #include "Character.h"
 
-Character::Character()
+Character::Character(IO *pIO)
 {
-	InitChar();
+	mIO = pIO;
+}
+
+void Character::InitChar()
+{
+	sf::Texture texture;
+	texture.loadFromFile("Resources/pacDan.png");
+	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
 }
 
 int Character::GetHeight()
@@ -18,10 +25,7 @@ int Character::GetWidth()
 
 void Character::MoveChar()
 {
-	//TODO
+	
 }
 
-int Character::InitChar()
-{
-	return 0;
-}
+

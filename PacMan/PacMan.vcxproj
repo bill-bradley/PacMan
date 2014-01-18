@@ -87,6 +87,7 @@
   <ItemGroup>
     <ClInclude Include="Character.h" />
     <ClInclude Include="IO.h" />
+    <ClInclude Include="Pac.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tile.h" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="IO.cpp" />
+    <ClCompile Include="Pac.cpp" />
     <ClCompile Include="PacMan.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
