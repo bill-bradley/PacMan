@@ -5,5 +5,5 @@
 
 void Pac::DrawPac()
 {
-
+	std::cout << "test" << std::endl;
 }

@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Character.h"
+#include "IO.h"
+#include <iostream>
 #ifndef _PAC_
 #define _PAC_
 
@@ -9,9 +11,13 @@ class Pac : public Character
 {
 public:
 
-	Pac();
+	Pac(IO *pIO)
+	: Character(pIO)
+	{
+
+	}
 	
 	void DrawPac();
 };
-//  test git
+
 #endif // _PAC_
