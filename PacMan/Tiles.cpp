@@ -3,11 +3,12 @@
 
 Tiles::Tiles()
 {
-	if (!textureTile.loadFromFile("Resources/pink_tile_set/spritesheet.png", sf::IntRect(0, 0, TILE_HEIGHT, TILE_WIDTH))) {
+	std::cout << "Loading " << std::endl;
+	if (!textureTile.loadFromFile("Resources/pink_tile_set/spritesheet.png")) {
 		std::cout << "Error loading tile" << std::endl;
 	}
 
-	spriteTile.setTexture(textureTile);
+	spriteTile = sf::Sprite(textureTile);
 	initalizeAllTiles();
 }
 
@@ -24,4 +25,8 @@ void Tiles::initalizeAllTiles() {
 	allTiles[9] = new Tile(9, 1, 1, 0, 1);
 	allTiles[10] = new Tile(10, 1, 1, 1, 0);
 	allTiles[11] = new Tile(11, 1, 1, 1, 1);
+}
+
+sf::Sprite* Tiles::getSprite() {
+	return &spriteTile;
 }

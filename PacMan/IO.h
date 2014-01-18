@@ -15,10 +15,12 @@ public:
 	void UpdateScreen();
 	void ClearScreen();
 	void DrawRectangle(int sX, int sY, int pX, int pY, sf::Texture texture);
+	void DrawSprite(sf::Sprite* sprite);
 	int PollKey();
 	int GetKey();
 	int GetScreenHeight();
 	int GetScreenWidth();
+//	sf::RenderWindow* getScreen();
 
 };
 

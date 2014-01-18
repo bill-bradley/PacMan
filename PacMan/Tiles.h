@@ -29,6 +29,7 @@ class Tiles
 public:
 	Tiles();
 	Tile* allTiles[TOTAL_TILES];
+	sf::Sprite* getSprite();
 
 private:
 	sf::Texture textureTile;

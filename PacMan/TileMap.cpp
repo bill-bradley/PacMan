@@ -20,9 +20,10 @@ std::vector<std::string> split(const std::string &s, char delim) {
 
 TileMap::TileMap(IO *pIO)
 {
+	mIO = pIO;
 	cout << "Opening map file" << endl;
-	ifstream file("Resources/testalltiles.map");
-	tiles = Tiles();
+	ifstream file("Resources/square.map");
+//	tiles = Tiles();
 
 	if (file.is_open())
 	{
@@ -47,10 +48,16 @@ TileMap::TileMap(IO *pIO)
 
 void TileMap::drawMap()
 {
-	for (auto row = begin(tileVector); row != end(tileVector); ++row) {
-		for (auto col = begin(*row); col != end(*row); ++col) {
-			cout << (*col)->getIndex() << " ";
+	int rowIndex = 0;
+	int colIndex = 0;
+	for (auto row = begin(tileVector); row != end(tileVector); ++row, rowIndex++) {
+		colIndex = 0;
+		for (auto col = begin(*row); col != end(*row); ++col, colIndex++) {
+	//		cout << (*col)->getIndex() << " ";
+			tiles.getSprite()->setTextureRect(sf::IntRect(32*(*col)->getIndex(),0,32,32));
+			tiles.getSprite()->setPosition(sf::Vector2f(32*colIndex, 32*rowIndex));
+			mIO->DrawSprite(tiles.getSprite());
 		}
-		cout << endl;
+//		cout << endl;
 	}
 }

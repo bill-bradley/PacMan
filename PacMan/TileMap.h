@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include <SFML/Graphics.hpp>
+#include <SFML\Graphics.hpp>
 #include <fstream>
 #include <string>
 #include "Tiles.h"
@@ -19,6 +19,7 @@ public:
 	void drawMap();
 
 private:
+	IO *mIO;
 	Tiles tiles;
 	vector<vector<Tile*>> tileVector;
 

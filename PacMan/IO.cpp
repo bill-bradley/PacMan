@@ -24,8 +24,11 @@ void IO::ClearScreen()
 	mScreen->clear(sf::Color::White);
 }
 
-
-
+/*
+sf::RenderWindow* getScreen(){
+	return mScreen;
+}
+*/
 
 void IO::DrawRectangle(int sX, int sY,int pX, int pY, sf::Texture texture)
 {
@@ -34,6 +37,11 @@ void IO::DrawRectangle(int sX, int sY,int pX, int pY, sf::Texture texture)
 	rectangle.setTexture(&texture);
 	rectangle.setPosition(pX, pY);
 	mScreen->draw(rectangle);
+}
+
+void IO::DrawSprite(sf::Sprite* sprite)
+{
+	mScreen->draw((*sprite));
 }
 
 int IO::PollKey()
