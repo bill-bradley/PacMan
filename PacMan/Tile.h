@@ -8,6 +8,7 @@ class Tile
 {
 public:
 	Tile(int smi, int n, int e, int s, int w);
+	int getIndex();
 
  private:
 	 int spriteMapIndex;

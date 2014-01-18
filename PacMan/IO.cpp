@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "IO.h"
+#include "TileMap.h"
 
 static sf::RenderWindow *mScreen;
 
@@ -10,6 +11,7 @@ IO::IO()
 
 int IO::InitGraph()
 {
+	TileMap pacmanMap = TileMap();
 	mScreen = new sf::RenderWindow(sf::VideoMode(640, 750), "PacDan");
 	return 0;
 }

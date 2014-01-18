@@ -11,3 +11,6 @@ Tile::Tile(int smi, int n, int e, int s, int w)
 
 }
 
+int Tile::getIndex() {
+	return spriteMapIndex;
+}
