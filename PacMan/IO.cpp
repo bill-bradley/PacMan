@@ -10,7 +10,7 @@ IO::IO()
 
 int IO::InitGraph()
 {
-	mScreen = new sf::RenderWindow(sf::VideoMode(640, 750), "PacDan");
+	mScreen = new sf::RenderWindow(sf::VideoMode(875, 965), "PacDan");
 	return 0;
 }
 
