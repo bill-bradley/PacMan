@@ -11,6 +11,7 @@ IO::IO()
 int IO::InitGraph()
 {
 	mScreen = new sf::RenderWindow(sf::VideoMode(875, 600), "PacDan");
+	mScreen->setFramerateLimit(60);
 	return 0;
 }
 
