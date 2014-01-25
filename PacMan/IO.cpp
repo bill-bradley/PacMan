@@ -31,12 +31,12 @@ sf::RenderWindow* getScreen(){
 }
 */
 
-void IO::DrawRectangle(int sX, int sY,int pX, int pY, sf::Texture texture)
+void IO::DrawRectangle(int sX, int sY, sf::Vector2<float> vect, sf::Texture texture)
 {
 	sf::RectangleShape rectangle;
 	rectangle.setSize(sf::Vector2f(sX, sY));
 	rectangle.setTexture(&texture);
-	rectangle.setPosition(pX, pY);
+	rectangle.setPosition(vect);
 	mScreen->draw(rectangle);
 }
 

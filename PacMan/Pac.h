@@ -16,7 +16,7 @@ public:
 	void DrawPac();
 private:
 	IO *mIO;
-	sf::Texture texture;
+	//sf::Texture texture;
 };
 
 #endif // _PAC_

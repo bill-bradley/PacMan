@@ -6,7 +6,7 @@
 #include "IO.h"
 #include "TileMap.h"
 #include "Pac.h"
-#include "Ghost.h"
+//#include "Ghost.h"
 #include <iostream>
 
 int main()
@@ -15,15 +15,16 @@ int main()
 	Character mChar(&mIO);
 	TileMap pacmanMap = TileMap(&mIO);
 	Pac mPac(&mIO);
-	Ghost mGhost(&mIO);
+	//Ghost mGhost(&mIO);
 	int xPos = mIO.GetScreenWidth();
 	//std::cout << xPos << std::endl;
-	int ghostPos;
+	//int ghostPos;
 
 	while (true)
 	{
 		mIO.ClearScreen();
 
+		/*
 		int mKey = mIO.PollKey();
 		switch (mKey)
 		{
@@ -48,19 +49,14 @@ int main()
 				break;
 			}
 		}
+		*/
 
 		pacmanMap.drawMap();
-		mPac.DrawPac();
+		mPac.setPosition(sf::Vector2f(1, 1));
+		mPac.DrawChar();
 		//mChar.DrawChar();
-		mGhost.DrawGhost();
-		ghostPos = mGhost.GetPositionX();
-		if (xPos > ghostPos+32 ){
-			mGhost.mPosX+=10;
-		}
-		else {
-			mGhost.mPosX -= 10;
-		}
-		//std::cout << mGhost.mPosX << std::endl;
+		//mGhost.DrawGhost();
+		//ghostPos = mGhost.GetPositionX();
 		mIO.UpdateScreen();
 	}
 

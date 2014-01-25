@@ -5,20 +5,34 @@ Character::Character(IO *pIO)
 {
 	mIO = pIO;
 	currentDirection = EAST;
-	//InitChar();
+	InitChar();
 }
-/*
+
 void Character::InitChar()
 {
-	texture.loadFromFile("Resources/pacDan.png");
+	//texture.loadFromFile("Resources/pacDan.png");
 	DrawChar();
 }
 
 void Character::DrawChar()
 {
-	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, mPosX, mPosY, texture);
+	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, position, texture);
 }
-*/
+
+sf::Texture* Character::GetTexture()
+{
+	return &texture;
+}
+
+void Character::setPosition(sf::Vector2<float> vect)
+{
+	position = vect;
+}
+
+sf::Vector2<float> Character::GetPosition()
+{
+	return position;
+}
 
 direction Character::getDirection() {
 	return currentDirection;
@@ -43,10 +57,6 @@ void Character::MoveChar()
 	
 }
 
-int Character::GetPositionX()
-{
-	return mPosX;
-}
 
 
 

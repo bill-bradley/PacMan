@@ -14,7 +14,7 @@ public:
 	int InitGraph();
 	void UpdateScreen();
 	void ClearScreen();
-	void DrawRectangle(int sX, int sY, int pX, int pY, sf::Texture texture);
+	void DrawRectangle(int sX, int sY, sf::Vector2<float> vect, sf::Texture texture);
 	void DrawSprite(sf::Sprite* sprite);
 	int PollKey();
 	int GetKey();

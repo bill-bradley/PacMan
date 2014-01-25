@@ -19,14 +19,18 @@ public:
 	int GetHeight();
 	int GetWidth();
 	void MoveChar();
-	int mPosX, mPosY;
+	void setPosition(sf::Vector2<float> vect);
+	sf::Vector2<float> GetPosition();
 	void setDirection(direction dir);
 	direction getDirection();
 	void DrawChar();
 	int GetPositionX();
+	sf::Texture* GetTexture();
+	
 
 private:
 	IO *mIO;
+	sf::Vector2<float> position;
 	direction currentDirection;
 	sf::Texture texture;
 	
