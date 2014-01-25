@@ -16,7 +16,7 @@ void Character::InitChar()
 
 void Character::DrawChar()
 {
-	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, position, texture);
+	mIO->DrawRectangle(CHARACTER_WIDTH, CHARACTER_HEIGHT, sf::Vector2f(position.x*CHARACTER_WIDTH, position.y*CHARACTER_HEIGHT), texture);
 }
 
 sf::Texture* Character::GetTexture()
