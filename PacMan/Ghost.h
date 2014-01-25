@@ -13,12 +13,8 @@ public:
 
 	Ghost(IO *pIO);
 	void InitChar();
-	void DrawGhost();
-	void MoveGhost();
-
 private:
 	IO *mIO;
-	sf::Texture texture;
 };
 
 #endif // _PAC_

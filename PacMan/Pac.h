@@ -13,10 +13,8 @@ public:
 
 	Pac(IO *pIO);
 	void InitChar();
-	void DrawPac();
 private:
 	IO *mIO;
-	//sf::Texture texture;
 };
 
 #endif // _PAC_
