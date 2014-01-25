@@ -28,6 +28,8 @@ void moveCharacter(TileMap* m, Character* c) {
 		newPos.x--;
 	}
 
+	std::cout << "X: " << newPos.x << " Y: " << newPos.y << std::endl;
+	std::cout << "X: " << newPos.x << " Y: " << newPos.y << std::endl;
 	if (m->getTile(newPos)->getIndex() == TILE_EMPTY)
 	{
 		c->setPosition(newPos);

@@ -64,5 +64,5 @@ void TileMap::drawMap()
 
 Tile* TileMap::getTile(sf::Vector2f vec)
 {
-	return tileVector.at(vec.x).at(vec.y);
+	return tileVector.at(vec.y).at(vec.x);
 }
