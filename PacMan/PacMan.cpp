@@ -9,12 +9,38 @@
 //#include "Ghost.h"
 #include <iostream>
 
+void moveCharacter(TileMap* m, Character* c) {
+	sf::Vector2f newPos(c->GetPosition().x, c->GetPosition().y);
+	if (c->getDirection() == NORTH)
+	{
+		newPos.y--;
+	}
+	else if (c->getDirection() == EAST)
+	{
+		newPos.x++;
+	}
+	else if (c->getDirection() == SOUTH)
+	{ 
+		newPos.y++;
+	}
+	else if (c->getDirection() == WEST)
+	{
+		newPos.x--;
+	}
+
+	if (m->getTile(newPos)->getIndex() == TILE_EMPTY)
+	{
+		c->setPosition(newPos);
+	}
+}
+
 int main()
 {
 	IO mIO;
 	Character mChar(&mIO);
 	TileMap pacmanMap = TileMap(&mIO);
 	Pac mPac(&mIO);
+	mPac.setPosition(sf::Vector2f(1, 1));
 	//Ghost mGhost(&mIO);
 	int xPos = mIO.GetScreenWidth();
 	//std::cout << xPos << std::endl;
@@ -24,35 +50,33 @@ int main()
 	{
 		mIO.ClearScreen();
 
-		/*
 		int mKey = mIO.PollKey();
 		switch (mKey)
 		{
 			case (sf::Keyboard::Key::Right) :
 			{
-				mPac.mPosX+=10;
+				mPac.setDirection(EAST);
 				break;
 			}
 			case (sf::Keyboard::Key::Left) :
 			{
-				mPac.mPosX -= 10;
+				mPac.setDirection(WEST);
 				break;
 			}
 			case (sf::Keyboard::Key::Up) :
 			{
-				mPac.mPosY -= 10;
+				mPac.setDirection(NORTH);
 				break;
 			}
 			case (sf::Keyboard::Key::Down) :
 			{
-				mPac.mPosY += 10;
+				mPac.setDirection(SOUTH);
 				break;
 			}
 		}
-		*/
 
 		pacmanMap.drawMap();
-		mPac.setPosition(sf::Vector2f(1, 1));
+		moveCharacter(&pacmanMap, &mPac);
 		mPac.DrawChar();
 		//mChar.DrawChar();
 		//mGhost.DrawGhost();

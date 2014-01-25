@@ -52,11 +52,4 @@ int Character::GetWidth()
 	return CHARACTER_WIDTH;
 }
 
-void Character::MoveChar()
-{
-	
-}
-
-
-
 

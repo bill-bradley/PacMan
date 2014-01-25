@@ -17,6 +17,7 @@ class TileMap
 public:
 	TileMap(IO *pIO);
 	void drawMap();
+	Tile* getTile(sf::Vector2f pos);
 
 private:
 	IO *mIO;

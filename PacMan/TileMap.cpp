@@ -61,3 +61,8 @@ void TileMap::drawMap()
 //		cout << endl;
 	}
 }
+
+Tile* TileMap::getTile(sf::Vector2f vec)
+{
+	return tileVector.at(vec.x).at(vec.y);
+}
