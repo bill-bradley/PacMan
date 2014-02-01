@@ -5,6 +5,7 @@
 #include "Character.h"
 #include "IO.h"
 #include "TileMap.h"
+#include "Tiles.h"
 #include "Pac.h"
 //#include "Ghost.h"
 #include <iostream>
@@ -103,15 +104,18 @@ bool validDirection(TileMap* m, Character* c, direction d)
 	}
 }
 
+
 int main()
 {
 	IO mIO;
-	Character mChar(&mIO);
-	TileMap pacmanMap = TileMap(&mIO);
-	Pac mPac(&mIO);
+	Tiles tiles = Tiles();
+	TileMap pacmanMap = TileMap(&mIO, &tiles);
+	Pac mPac(&mIO, &tiles, TILE_PacDanClosed, 2);
 	mPac.setPosition(sf::Vector2f(1, 1));
 	//Ghost mGhost(&mIO);
 	int xPos = mIO.GetScreenWidth();
+
+	sf::Clock clock;
 	//std::cout << xPos << std::endl;
 	//int ghostPos;
 
@@ -146,7 +150,11 @@ int main()
 
 		pacmanMap.drawMap();
 
-		moveCharacter(&pacmanMap, &mPac);
+		if (clock.getElapsedTime().asMilliseconds() >= 25)
+		{
+			clock.restart();
+			moveCharacter(&pacmanMap, &mPac);
+		}
 		
 		mPac.DrawChar();
 		//mChar.DrawChar();

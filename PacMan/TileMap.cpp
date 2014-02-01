@@ -18,9 +18,10 @@ std::vector<std::string> split(const std::string &s, char delim) {
 	return elems;
 }
 
-TileMap::TileMap(IO *pIO)
+TileMap::TileMap(IO *pIO, Tiles *t)
 {
 	mIO = pIO;
+	tiles = t;
 	//cout << "Opening map file" << endl;
 	ifstream file("Resources/square.map");
 //	tiles = Tiles();
@@ -37,7 +38,7 @@ TileMap::TileMap(IO *pIO)
 			vector<Tile*> tempVector;
 			for (auto it = begin(stringTemp); it != end(stringTemp); ++it) {
 				
-				tempVector.push_back(tiles.allTiles[atoi(it->c_str())]);
+				tempVector.push_back(tiles->allTiles[atoi(it->c_str())]);
 			}			
 			tileVector.push_back(tempVector);
 		}
@@ -60,9 +61,9 @@ void TileMap::drawMap()
 	for (auto row = begin(tileVector); row != end(tileVector); ++row, rowIndex++) {
 		colIndex = 0;
 		for (auto col = begin(*row); col != end(*row); ++col, colIndex++) {
-			tiles.getSprite()->setTextureRect(sf::IntRect(32*(*col)->getIndex(),0,32,32));
-			tiles.getSprite()->setPosition(sf::Vector2f(32*colIndex, 32*rowIndex));
-			mIO->DrawSprite(tiles.getSprite());
+			tiles->getSprite()->setTextureRect(sf::IntRect(32*(*col)->getIndex(),0,32,32));
+			tiles->getSprite()->setPosition(sf::Vector2f(32*colIndex, 32*rowIndex));
+			mIO->DrawSprite(tiles->getSprite());
 		}
 	}
 }

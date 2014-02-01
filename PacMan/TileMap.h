@@ -15,7 +15,7 @@ using namespace std;
 class TileMap
 {
 public:
-	TileMap(IO *pIO);
+	TileMap(IO *pIO, Tiles *t);
 	void drawMap();
 	Tile* getTile(sf::Vector2f pos);
 	int getWidth();
@@ -23,7 +23,7 @@ public:
 
 private:
 	IO *mIO;
-	Tiles tiles;
+	Tiles *tiles;
 	vector<vector<Tile*>> tileVector;
 	int width;
 	int height;

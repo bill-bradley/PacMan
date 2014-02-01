@@ -3,6 +3,7 @@
 #define _CHARACTER_
 #include "IO.h"
 #include "direction.h"
+#include "Tiles.h"
 
 #define CHARACTER_HEIGHT 32
 #define CHARACTER_WIDTH 32
@@ -14,7 +15,7 @@ class Character
 {
 public:	
 
-	Character(IO *pIO);
+	Character(IO *pIO, Tiles *t, int tl, int tat);
 
 	void InitChar();
 	int GetHeight();
@@ -30,7 +31,6 @@ public:
 	void updateOffset();
 	void resetOffset();
 	sf::Vector2<float> getOffset();
-	
 
 private:
 	IO *mIO;
@@ -38,8 +38,11 @@ private:
 	sf::Vector2<float> offset;
 	direction currentDirection;
 	sf::Texture texture;
-
-	
+	Tiles *tiles;
+	int tileLocation;
+	int totalAnimationTiles;
+	int currentAnimationTile;
+	sf::Clock animationClock;
 };
 
 #endif // _CHARACTER_
