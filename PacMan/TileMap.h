@@ -18,6 +18,7 @@ public:
 	TileMap(IO *pIO, Tiles *t);
 	void drawMap();
 	Tile* getTile(sf::Vector2f pos);
+	void upDateTile(sf::Vector2f vec);
 	int getWidth();
 	int getHeight();
 

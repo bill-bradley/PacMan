@@ -38,3 +38,4 @@ void Tiles::initalizeAllTiles() {
 sf::Sprite* Tiles::getSprite() {
 	return &spriteTile;
 }
+

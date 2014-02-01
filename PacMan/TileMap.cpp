@@ -73,6 +73,11 @@ Tile* TileMap::getTile(sf::Vector2f vec)
 	return tileVector.at(vec.y).at(vec.x);
 }
 
+void TileMap::upDateTile(sf::Vector2f vec)
+{
+	tileVector[vec.y][vec.x] = TILE_EMPTY;
+}
+
 int TileMap::getHeight()
 {
 	return height;

@@ -50,6 +50,10 @@ void moveCharacter(TileMap* m, Character* c) {
 
 		if (m->getTile(newPos)->getIndex() == TILE_EMPTY || m->getTile(newPos)->getIndex() == TILE_Dot || m->getTile(newPos)->getIndex() == TILE_PowerUp)
 		{
+			if (m->getTile(newPos)->getIndex() == TILE_Dot)
+			{
+				
+			}
 			c->setPosition(newPos);
 		}
 	} else {
