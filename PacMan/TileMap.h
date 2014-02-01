@@ -18,11 +18,15 @@ public:
 	TileMap(IO *pIO);
 	void drawMap();
 	Tile* getTile(sf::Vector2f pos);
+	int getWidth();
+	int getHeight();
 
 private:
 	IO *mIO;
 	Tiles tiles;
 	vector<vector<Tile*>> tileVector;
+	int width;
+	int height;
 
 };
 

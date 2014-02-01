@@ -6,6 +6,7 @@
 
 #define CHARACTER_HEIGHT 32
 #define CHARACTER_WIDTH 32
+#define OFFSET 8
 
 #include <SFML\Graphics.hpp>
 
@@ -26,13 +27,18 @@ public:
 	void DrawChar();
 	int GetPositionX();
 	sf::Texture* GetTexture();
+	void updateOffset();
+	void resetOffset();
+	sf::Vector2<float> getOffset();
 	
 
 private:
 	IO *mIO;
 	sf::Vector2<float> position;
+	sf::Vector2<float> offset;
 	direction currentDirection;
 	sf::Texture texture;
+
 	
 };
 
