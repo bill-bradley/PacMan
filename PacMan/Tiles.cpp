@@ -25,6 +25,14 @@ void Tiles::initalizeAllTiles() {
 	allTiles[9] = new Tile(9, 1, 1, 0, 1);
 	allTiles[10] = new Tile(10, 1, 1, 1, 0);
 	allTiles[11] = new Tile(11, 1, 1, 1, 1);
+	allTiles[12] = new Tile(12, 0, 0, 0, 0);
+	allTiles[13] = new Tile(13, 0, 0, 0, 0);
+	allTiles[14] = new Tile(14, 0, 0, 0, 0);
+	allTiles[15] = new Tile(15, 0, 0, 0, 0);
+	allTiles[16] = new Tile(16, 0, 0, 0, 0);
+	allTiles[17] = new Tile(17, 0, 0, 0, 0);
+	allTiles[18] = new Tile(18, 0, 0, 0, 0);
+	allTiles[19] = new Tile(19, 0, 0, 0, 0);
 }
 
 sf::Sprite* Tiles::getSprite() {

@@ -6,7 +6,7 @@
 #ifndef _TILES_
 #define _TILES_
 
-const int TOTAL_TILES = 12;
+const int TOTAL_TILES = 20;
 const int TILE_HEIGHT = 32;
 const int TILE_WIDTH = 32;
 
@@ -23,6 +23,14 @@ const int TILE_NE = 8;
 const int TILE_NEW = 9;
 const int TILE_NES = 10;
 const int TILE_NESW = 11;
+const int TILE_GhostBlue = 12;
+const int TILE_GhostGreen = 13;
+const int TILE_GhostPink = 14;
+const int TILE_GhostRed = 15;
+const int TILE_PacDanClosed = 16;
+const int TILE_PacDanOpen = 17;
+const int TILE_Dot = 18;
+const int TILE_PowerUp = 19;
 
 class Tiles
 {

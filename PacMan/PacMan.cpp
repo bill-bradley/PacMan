@@ -47,12 +47,12 @@ void moveCharacter(TileMap* m, Character* c) {
 	if (c->getOffset().x >= CHARACTER_WIDTH || c->getOffset().y >= CHARACTER_HEIGHT) {
 		c->resetOffset();
 
-		if (m->getTile(newPos)->getIndex() == TILE_EMPTY)
+		if (m->getTile(newPos)->getIndex() == TILE_EMPTY || m->getTile(newPos)->getIndex() == TILE_Dot || m->getTile(newPos)->getIndex() == TILE_PowerUp)
 		{
 			c->setPosition(newPos);
 		}
 	} else {
-		if (m->getTile(newPos)->getIndex() == TILE_EMPTY)
+		if (m->getTile(newPos)->getIndex() == TILE_EMPTY || m->getTile(newPos)->getIndex() == TILE_Dot || m->getTile(newPos)->getIndex() == TILE_PowerUp)
 		{
 			c->updateOffset();
 		}
@@ -94,7 +94,7 @@ bool validDirection(TileMap* m, Character* c, direction d)
 		newPos.x = m->getWidth() - 1;
 	}
 
-	if (m->getTile(newPos)->getIndex() == TILE_EMPTY)
+	if (m->getTile(newPos)->getIndex() == TILE_EMPTY || m->getTile(newPos)->getIndex() == TILE_Dot || m->getTile(newPos)->getIndex() == TILE_PowerUp)
 	{
 		return true;
 	}
