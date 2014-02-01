@@ -75,7 +75,7 @@ Tile* TileMap::getTile(sf::Vector2f vec)
 
 void TileMap::upDateTile(sf::Vector2f vec)
 {
-	tileVector[vec.y][vec.x] = TILE_EMPTY;
+	tileVector[vec.y][vec.x] = tiles->allTiles[TILE_EMPTY];
 }
 
 int TileMap::getHeight()

@@ -52,7 +52,7 @@ void moveCharacter(TileMap* m, Character* c) {
 		{
 			if (m->getTile(newPos)->getIndex() == TILE_Dot)
 			{
-				
+				m->upDateTile(newPos);
 			}
 			c->setPosition(newPos);
 		}
